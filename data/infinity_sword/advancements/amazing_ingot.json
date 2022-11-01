@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "Amazing Ingot!",
+            "color": "white"
+        },
+        "description": {
+            "text": "Get Infinitium Ingot",
+            "color": "green"
+        },
+        "icon": {
+            "item": "minecraft:iron_ingot"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "Amazing Ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:iron_ingot",
+                        "nbt": "{CustomModelData:000007}",
+                        "count": {
+                            "min": 1,
+                            "max": 1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "infinity_sword:root"
+}

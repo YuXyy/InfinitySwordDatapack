@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "Infinity Sword Tier 4",
+            "color": "white"
+        },
+        "description": {
+            "text": "Get the Infinity Sword Tier 4",
+            "color": "gold"
+        },
+        "icon": {
+            "item": "minecraft:diamond_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "it4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{CustomModelData:000005}",
+                        "count": {
+                            "min": 1,
+                            "max": 1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "infinity_sword:it3"
+}

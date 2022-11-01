@@ -1,0 +1,10 @@
+function infinity_sword:infinity_sword_t1_1
+function infinity_sword:infinity_sword_t2_1
+function infinity_sword:infinity_sword_t3_1
+function infinity_sword:infinity_sword_t4_1
+function infinity_sword:infinity_sword_t5_1
+function infinity_sword:infinity_sword_motion_1
+function infinity_sword:infinity_sword_ability_damage
+function infinity_sword:infinity_sword_scoreboard_reset
+function infinity_sword:infinity_sword_recipes
+function infinity_sword:infinity_sword_trigger

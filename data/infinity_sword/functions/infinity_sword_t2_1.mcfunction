@@ -1,0 +1,5 @@
+execute as @r at @s if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000003}}}] run execute at @s positioned ~ ~ ~ run effect give @s regeneration 1 1 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000003}}}] run execute at @s positioned ~ ~ ~ run effect give @s speed 20 1 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000003}}}] run execute at @s positioned ~ ~ ~ run effect give @s jump_boost 20 1 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000003}}}] run execute at @s positioned ~ ~ ~ run playsound entity.item.break master @s ~ ~ ~ 1 2
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000003}}}] run scoreboard players set @s click1 0

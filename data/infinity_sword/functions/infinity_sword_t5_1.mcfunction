@@ -1,0 +1,24 @@
+execute as @r at @s if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run effect give @s regeneration 1 2 true
+execute as @r at @s if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run effect give @s fire_resistance 1 0 true
+execute as @r at @s if entity @s[scores={kill3=1..},nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run scoreboard players set @s kill3 0
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run effect give @s instant_health 1 1 true
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run effect give @s saturation 1 2 true
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run playsound minecraft:item.honey_bottle.drink master @s ~ ~ ~ 10 1 
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run playsound minecraft:entity.wither.ambient master @s ~ ~ ~ 10 1 
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run particle heart ~ ~1 ~ 0.1 0.1 0.1 0.0001 20 force
+execute as @r at @s if entity @s[scores={kill3=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run scoreboard players set @s kill3 0
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run effect give @s speed 180 3 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run effect give @s jump_boost 180 1 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run effect give @s resistance 5 250 true
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run execute at @s positioned ~ ~ ~ run playsound entity.ender_dragon.growl master @s ~ ~ ~ 1 2
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] rotated as @s positioned 0 0 0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run summon armor_stand ~ ~0.5 ~ {Invisible:1b,Invulnerable:1b,Tags:["sword1"]}
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] positioned ~ ~1.5 ~ as @e[distance=..1,tag=sword1] positioned 0 0 0 store result score @s motionX run data get entity @e[tag=aim,limit=1] Pos[0] 1000
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] positioned ~ ~1.5 ~ as @e[distance=..1,tag=sword1] positioned 0 0 0 store result score @s motionY run data get entity @e[tag=aim,limit=1] Pos[1] 1000
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] positioned ~ ~1.5 ~ as @e[distance=..1,tag=sword1] positioned 0 0 0 store result score @s motionZ run data get entity @e[tag=aim,limit=1] Pos[2] 1000
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run kill @e[type=minecraft:armor_stand,tag=aim]
+execute at @e[tag=sword1] positioned ~ ~ ~ run particle minecraft:sonic_boom ~ ~1 ~ 0.01 0.01 0.01 1 1 force
+execute at @e[tag=sword1] positioned ~ ~ ~ run particle minecraft:flash ~ ~1 ~ 0.01 0.01 0.01 1 1 force
+execute at @p as @p positioned as @s run execute at @e[tag=sword1,distance=50..] run execute at @p as @p positioned as @s run kill @e[tag=sword1,distance=50..]
+execute at @p positioned ~ ~ ~ run execute at @e[tag=sword1,distance=..0.4] run kill @e[tag=sword1,sort=nearest,limit=1]
+execute as @r at @s if entity @s[scores={click1=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:000006}}}] run scoreboard players set @s click1 0

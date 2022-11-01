@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Infinity Sword",
+            "color": "white",
+            "bold": false
+        },
+        "description": {
+            "text": "Enable the Infinity Sword Datapack",
+            "color": "green"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+        "criteria": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

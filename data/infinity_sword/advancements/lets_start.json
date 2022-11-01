@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "Let's get started",
+            "color": "white"
+        },
+        "description": {
+            "text": "Obtain Infinity Sword Base",
+            "color": "green"
+        },
+        "icon": {
+            "item": "minecraft:wooden_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "infinitybase": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{CustomModelData:000001}",
+                        "count": {
+                            "min": 1,
+                            "max": 1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "infinity_sword:amazing_ingot"
+}
